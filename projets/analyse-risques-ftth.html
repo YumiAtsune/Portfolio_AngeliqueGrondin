@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyse de Risques FTTH — Projet Cybersécurité</title>
+  <meta name="description" content="Analyse de risques et contrôles de sécurité pour infrastructure FTTH selon EBIOS Risk Manager">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <nav role="navigation" aria-label="Navigation principale">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand" role="banner">
+        <span class="dot" aria-hidden="true"></span> 
+        <span>CYBER • PORTFOLIO</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#a-propos">À propos</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#experience">Expérience</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="toggleNeon" aria-label="Basculer les effets néon"> Néon</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <a href="../index.html#projets">Projets</a>
+      <span>/</span>
+      <span>Analyse de Risques FTTH</span>
+    </div>
+<b>
+  
+</b>
+    <section class="project-hero">
+      <h1 class="glow">Analyse de Risques FTTH — EBIOS Risk Manager</h1>
+      <p class="lead">
+        Étude complète des risques de cybersécurité d'une infrastructure FTTH avec la méthode EBIOS RM, 
+        identification des scénarios de menaces et définition de contrôles de sécurité adaptés.
+      </p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Durée</span>
+          <span class="meta-value">6 semaines (Oct-Nov 2024)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Équipe</span>
+          <span class="meta-value">2 personnes</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Rôle</span>
+          <span class="meta-value">Analyste risques & RSSI junior</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Cadre</span>
+          <span class="meta-value">Projet Orange + IUT</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Contexte</h3>
+        <p>
+          Dans le cadre de mon alternance chez Orange, j'ai mené une analyse de risques complète sur 
+          l'infrastructure FTTH (Fiber to the Home) déployée à La Réunion. L'objectif était d'identifier 
+          les menaces pesant sur cette infrastructure critique et de proposer un plan de traitement des risques.
+        </p>
+        <p style="margin-top: 12px;">
+          <strong>Périmètre étudié :</strong> Points de branchement optique (PBO), points de mutualisation (PM), 
+          équipements actifs, systèmes de gestion, réseaux de transport et d'accès.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Méthodologie EBIOS Risk Manager</h3>
+        <p style="margin-bottom: 16px;">
+          Application de la méthode ANSSI en 5 ateliers :
+        </p>
+        
+        <div class="timeline">
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Atelier 1 : Socle de Sécurité</h4>
+            <p style="margin-top:8px">
+              Identification des valeurs métier (disponibilité du service, confidentialité des données clients, 
+              intégrité des équipements), cartographie des biens supports et évaluation des mesures de sécurité existantes.
+            </p>
+          </div>
+          
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Atelier 2 : Sources de Risques</h4>
+            <p style="margin-top:8px">
+              Analyse des parties prenantes (concurrents, hacktivistes, cybercriminels, États) et de leurs 
+              motivations, moyens et opportunités d'attaque contre l'infrastructure FTTH.
+            </p>
+          </div>
+          
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Atelier 3 : Scénarios Stratégiques</h4>
+            <p style="margin-top:8px">
+              Modélisation de 12 scénarios de haut niveau : sabotage physique, compromission des systèmes 
+              de gestion, déni de service distribué, interception de données clients, etc.
+            </p>
+          </div>
+          
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Atelier 4 : Scénarios Opérationnels</h4>
+            <p style="margin-top:8px">
+              Détail des chemins d'attaque techniques : exploitation de vulnérabilités des OLT/ONT, 
+              compromission des protocoles de management, attaques sur la supply chain, etc.
+            </p>
+          </div>
+          
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Atelier 5 : Traitement des Risques</h4>
+            <p style="margin-top:8px">
+              Définition de 28 mesures de sécurité priorisées : durcissement des équipements, 
+              chiffrement des flux, segmentation réseau, surveillance continue, etc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Risques Majeurs Identifiés</h3>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>⚠️ Criticité ÉLEVÉE</h4>
+            <p><strong>Compromission des OLT</strong></p>
+            <p>Exploitation de vulnérabilités des équipements actifs permettant un contrôle de l'infrastructure d'accès</p>
+            <p style="margin-top: 8px; color: var(--muted);">Impact: Coupure de service massive</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>⚠️ Criticité ÉLEVÉE</h4>
+            <p><strong>Attaque par déni de service</strong></p>
+            <p>DDoS ciblant les systèmes de provisioning et de gestion des clients, paralysant les opérations</p>
+            <p style="margin-top: 8px; color: var(--muted);">Impact: Interruption commerciale</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>⚠️ Criticité MOYENNE</h4>
+            <p><strong>Sabotage physique</strong></p>
+            <p>Destruction intentionnelle de PBO/PM ou coupure de câbles, nécessitant des interventions terrain coûteuses</p>
+            <p style="margin-top: 8px; color: var(--muted);">Impact: Coûts et délais de réparation</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>⚠️ Criticité MOYENNE</h4>
+            <p><strong>Interception de données</strong></p>
+            <p>Écoute passive du trafic client via split de fibre ou compromission d'équipements intermédiaires</p>
+            <p style="margin-top: 8px; color: var(--muted);">Impact: Fuite de données sensibles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Mesures de Sécurité Recommandées</h3>
+        
+        <h4 style="color:var(--emerald-200); margin-top: 16px; margin-bottom: 12px;">Protection des Équipements</h4>
+        <ul class="results-list">
+          <li>Durcissement des OLT/ONT (désactivation services inutiles, mises à jour de sécurité)</li>
+          <li>Authentification forte pour l'accès management (MFA, certificats)</li>
+          <li>Chiffrement des flux de management (SSH, TLS 1.3+)</li>
+          <li>Isolation réseau des équipements critiques (VLANs dédiés, ACLs strictes)</li>
+        </ul>
+
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">Détection et Réponse</h4>
+        <ul class="results-list">
+          <li>Déploiement IDS/IPS sur les segments critiques</li>
+          <li>Monitoring continu des logs équipements (SIEM centralisé)</li>
+          <li>Alerting sur événements suspects (connexions anormales, changements de configuration)</li>
+          <li>Procédures de réponse aux incidents documentées</li>
+        </ul>
+
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">Sécurité Physique</h4>
+        <ul class="results-list">
+          <li>Sécurisation des armoires PBO/PM (serrures renforcées, alarmes)</li>
+          <li>Vidéosurveillance des sites sensibles</li>
+          <li>Traçabilité des interventions terrain</li>
+          <li>Détection de manipulation physique (capteurs d'ouverture)</li>
+        </ul>
+
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">Gouvernance</h4>
+        <ul class="results-list">
+          <li>Politique de gestion des correctifs (patch management)</li>
+          <li>Audits de sécurité périodiques</li>
+          <li>Formation des équipes terrain et exploitation</li>
+          <li>Plan de continuité d'activité et de reprise après sinistre</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Résultats de l'Analyse</h3>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4> Couverture</h4>
+            <p><strong>12 scénarios</strong> stratégiques</p>
+            <p><strong>34 scénarios</strong> opérationnels</p>
+            <p><strong>28 mesures</strong> de sécurité</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4> Budget Estimé</h4>
+            <p>Investissement initial : <strong>~180 k€</strong></p>
+            <p>Coûts récurrents : <strong>~45 k€/an</strong></p>
+            <p>ROI attendu : <strong>18 mois</strong></p>
+          </div>
+          
+          <div class="feature-card">
+            <h4> Planning</h4>
+            <p>Quick wins : <strong>3 mois</strong></p>
+            <p>Déploiement complet : <strong>12 mois</strong></p>
+            <p>Priorisation : <strong>5 niveaux</strong></p>
+          </div>
+          
+          <div class="feature-card">
+            <h4> Réduction des Risques</h4>
+            <p>Risques critiques : <strong>-75%</strong></p>
+            <p>Exposition globale : <strong>-60%</strong></p>
+            <p>Conformité : <strong>ANSSI/NIS2</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Livrables Produits</h3>
+        <ul class="results-list">
+          <li><strong>Rapport d'analyse EBIOS RM</strong> (68 pages) - Synthèse exécutive et détails techniques</li>
+          <li><strong>Cartographie des risques</strong> - Matrices de risques bruts et résiduels</li>
+          <li><strong>Plan de traitement</strong> - Roadmap détaillée sur 12 mois avec priorisation</li>
+          <li><strong>Fiches de contrôles</strong> - 28 fiches détaillant objectifs, mise en œuvre, métriques</li>
+          <li><strong>Présentation direction</strong> - Synthèse décisionnelle pour le COMEX</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Outils Utilisés</h3>
+        <div class="tech-stack">
+          <span class="tech-item">EBIOS Risk Manager</span>
+          <span class="tech-item">Microsoft Visio</span>
+          <span class="tech-item">Excel</span>
+          <span class="tech-item">LaTeX</span>
+          <span class="tech-item">Draw.io</span>
+          <span class="tech-item">ANSSI Guides</span>
+          <span class="tech-item">ISO 27001</span>
+          <span class="tech-item">NIS2</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Compétences Développées</h3>
+        <ul class="results-list">
+          <li><strong>Analyse de risques</strong> - Application rigoureuse de la méthode EBIOS RM</li>
+          <li><strong>Gestion de projet risques</strong> - Planning, coordination, revues avec parties prenantes</li>
+          <li><strong>Communication</strong> - Adaptation du discours selon l'audience (technique vs direction)</li>
+          <li><strong>Connaissance métier</strong> - Compréhension approfondie des infrastructures FTTH</li>
+          <li><strong>Conformité</strong> - Alignement avec référentiels ANSSI, ISO 27001, NIS2</li>
+          <li><strong>Rédaction technique</strong> - Production de livrables professionnels et structurés</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Retour d'Expérience</h3>
+        <p>
+          Ce projet m'a permis de développer une vision stratégique de la cybersécurité :
+        </p>
+        <ul style="margin-top: 12px; padding-left: 20px; line-height: 1.8;">
+          <li><strong>Approche holistique</strong> : La sécurité d'une infrastructure critique nécessite une vision 
+          globale intégrant technique, processus, organisation et conformité</li>
+          <li><strong>Priorisation</strong> : Face à des ressources limitées, l'analyse de risques permet de concentrer 
+          les efforts sur les menaces les plus critiques avec le meilleur ROI</li>
+          <li><strong>Sensibilisation</strong> : La capacité à expliquer clairement les risques cyber aux métiers 
+          et à la direction est aussi importante que l'expertise technique</li>
+          <li><strong>Pragmatisme</strong> : Les recommandations doivent être réalistes, implémentables et tenir 
+          compte des contraintes opérationnelles et budgétaires</li>
+        </ul>
+      </div>
+    </section>
+
+    <a href="../index.html#projets" class="btn back-btn">← Retour aux projets</a>
+  </main>
+
+  <footer>
+    <p>© 2025 Angélique — Portfolio Cybersécurité</p>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="../scripts/animations.js"></script>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

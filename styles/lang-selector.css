@@ -1,0 +1,71 @@
+/* Language Selector Styles */
+#languageSelector {
+  position: relative;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-flag {
+  font-size: 18px;
+}
+
+.lang-code {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: linear-gradient(135deg, rgba(10,15,12,0.98), rgba(0,0,0,0.95));
+  border: 1px solid rgba(16,185,129,0.4);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.lang-dropdown.show {
+  display: flex;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-family: inherit;
+}
+
+.lang-option:hover {
+  background: rgba(16,185,129,0.15);
+}
+
+.lang-option.active {
+  background: rgba(16,185,129,0.1);
+  color: var(--emerald-200);
+}
+
+.lang-option .lang-flag {
+  font-size: 20px;
+}
+
+.lang-option .lang-name {
+  font-size: 14px;
+  font-weight: 500;
+}

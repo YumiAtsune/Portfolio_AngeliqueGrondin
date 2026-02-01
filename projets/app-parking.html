@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Cagnotte Parking — Projet Cybersécurité</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <canvas id="matrix"></canvas>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand"><span class="dot"></span> <span>CYBER • PORTFOLIO</span></a>
+      <div class="nav-links">
+        <a href="../index.html#a-propos">À propos</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#experience">Expérience</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="toggleNeon">Néon</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a> <span>/</span> <a href="../index.html#projets">Projets</a> <span>/</span> <span>App Cagnotte Parking</span>
+    </div>
+
+    <section class="project-hero">
+      <h1 class="glow">Application Cagnotte Parking</h1>
+      <p class="lead">Système de fidélité parking avec back-end sécurisé, détection de fraude, gestion de rôles et QR codes cryptographiques.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Durée</span><span class="meta-value">10 semaines</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">4 personnes</span></div>
+        <div class="meta-item"><span class="meta-label">Cadre</span><span class="meta-value">Projet IUT</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Contexte</h3>
+        <p>Développement d'une application de fidélité pour un parking permettant aux utilisateurs d'accumuler des points à chaque stationnement et de les échanger contre des avantages. Le système devait être robuste face aux tentatives de fraude (manipulation de soldes, utilisation de QR codes volés) et respecter les standards de sécurité applicative.</p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Architecture Technique</h3>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>Back-end Sécurisé</h4>
+            <p>API REST en Python/Flask avec authentification JWT, validation stricte des entrées, rate limiting</p>
+          </div>
+          <div class="feature-card">
+            <h4> Base de Données</h4>
+            <p>PostgreSQL avec ORM SQLAlchemy, transactions ACID, audit trail complet des opérations sensibles</p>
+          </div>
+          <div class="feature-card">
+            <h4> QR Codes Crypto</h4>
+            <p>Génération de QR codes signés numériquement (HMAC-SHA256) avec timestamp et one-time use</p>
+          </div>
+          <div class="feature-card">
+            <h4> Gestion de Rôles</h4>
+            <p>RBAC avec 4 rôles (client, employé, manager, admin), permissions granulaires par endpoint</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Sécurité Implémentée</h3>
+        <ul class="results-list">
+          <li><strong>Authentification & Autorisation</strong> - JWT avec rotation de tokens, refresh tokens sécurisés</li>
+          <li><strong>Protection des données</strong> - Chiffrement AES-256 pour données sensibles, hashing bcrypt des mots de passe</li>
+          <li><strong>Détection de fraude</strong> - Algorithme de détection d'anomalies (tentatives répétées, QR codes réutilisés)</li>
+          <li><strong>Journalisation</strong> - Logs complets des actions sensibles (transactions, modifications de solde)</li>
+          <li><strong>Validation</strong> - Input validation stricte, protection CSRF/XSS, paramétrage SQL prévenant les injections</li>
+          <li><strong>Rate Limiting</strong> - Limitation du nombre de requêtes par utilisateur (anti-brute force)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Détection de Fraude</h3>
+        <p>Système de scoring en temps réel détectant les comportements suspects :</p>
+        <ul style="padding-left: 20px; margin-top: 12px; line-height: 1.8;">
+          <li><strong>Détection de QR dupliqués</strong> - Vérification de l'unicité et de l'expiration des QR codes</li>
+          <li><strong>Analyse comportementale</strong> - Fréquence anormale de scans, patterns inhabituels</li>
+          <li><strong>Validation géographique</strong> - Cohérence entre emplacement du scan et parking déclaré</li>
+          <li><strong>Alerting automatique</strong> - Notification managers pour comptes flaggés comme suspects</li>
+          <li><strong>Blocage préventif</strong> - Suspension automatique des comptes avec score de fraude élevé</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Résultats</h3>
+        <div class="features-grid">
+          <div class="feature-card"><h4>📈Adoption</h4><p><strong>450 utilisateurs</strong> inscrits</p><p><strong>~80 transactions/jour</strong></p></div>
+          <div class="feature-card"><h4> Sécurité</h4><p><strong>0 incident</strong> de sécurité</p><p><strong>12 tentatives</strong> de fraude détectées</p></div>
+          <div class="feature-card"><h4> Performance</h4><p>Temps de réponse API : <strong>&lt;150ms</strong></p><p>Disponibilité : <strong>99.8%</strong></p></div>
+          <div class="feature-card"><h4> Conformité</h4><p>RGPD compliant</p><p>Tests sécurité : <strong>OWASP Top 10</strong></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Stack Technique</h3>
+        <div class="tech-stack">
+          <span class="tech-item">Python</span>
+          <span class="tech-item">Flask</span>
+          <span class="tech-item">PostgreSQL</span>
+          <span class="tech-item">SQLAlchemy</span>
+          <span class="tech-item">JWT</span>
+          <span class="tech-item">Bcrypt</span>
+          <span class="tech-item">AES-256</span>
+          <span class="tech-item">HMAC-SHA256</span>
+          <span class="tech-item">Docker</span>
+          <span class="tech-item">Nginx</span>
+          <span class="tech-item">Pytest</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Compétences Développées</h3>
+        <ul class="results-list">
+          <li><strong>Développement sécurisé</strong> - Implémentation des bonnes pratiques OWASP, threat modeling</li>
+          <li><strong>Cryptographie appliquée</strong> - Utilisation appropriée du chiffrement et de la signature</li>
+          <li><strong>Architecture API</strong> - Design RESTful, gestion de sessions, rate limiting</li>
+          <li><strong>Sécurité des données</strong> - Protection des données sensibles, RGPD, audit trail</li>
+          <li><strong>DevSecOps</strong> - Intégration tests de sécurité dans CI/CD, scanning de vulnérabilités</li>
+        </ul>
+      </div>
+    </section>
+
+    <a href="../index.html#projets" class="btn back-btn">← Retour aux projets</a>
+  </main>
+
+  <footer><p>© 2025 Angélique — Portfolio Cybersécurité</p></footer>
+  <div id="toast" class="toast"></div>
+  <script src="../scripts/animations.js"></script>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit de Sécurité — Projet Cybersécurité</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <canvas id="matrix"></canvas>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand"><span class="dot"></span> <span>CYBER • PORTFOLIO</span></a>
+      <div class="nav-links">
+        <a href="../index.html#a-propos">À propos</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#experience">Expérience</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="toggleNeon">Néon</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a> <span>/</span> <a href="../index.html#projets">Projets</a> <span>/</span> <span>Audit de Sécurité</span>
+    </div>
+
+    <section class="project-hero">
+      <h1 class="glow">Audit de Sécurité — Exploitation CVE-2008-1930</h1>
+      <p class="lead">Audit de sécurité complet avec exploitation de vulnérabilité critique, tests d'intrusion, analyse forensique et recommandations de remédiation.</p>
+      <div class="project-meta">
+        <div class="meta-item"><span class="meta-label">Durée</span><span class="meta-value">4 semaines</span></div>
+        <div class="meta-item"><span class="meta-label">Équipe</span><span class="meta-value">2 personnes</span></div>
+        <div class="meta-item"><span class="meta-label">Rôle</span><span class="meta-value">Pentester & Auditeur sécurité</span></div>
+        <div class="meta-item"><span class="meta-label">Cadre</span><span class="meta-value">TP Cybersécurité IUT</span></div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Contexte et Objectifs</h3>
+        <p>Dans le cadre d'un exercice de pentest en environnement contrôlé, nous devions réaliser un audit de sécurité complet d'une infrastructure volontairement vulnérable. L'objectif était de détecter, exploiter et documenter les failles de sécurité, puis de proposer un plan de remédiation détaillé.</p>
+        <p style="margin-top: 12px;"><strong>Cible :</strong> Serveur web Linux (Apache) avec vulnérabilité connue CVE-2008-1930 (Joomla! Remote Code Execution)</p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Méthodologie d'Audit</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 1 : Reconnaissance</h4>
+            <p style="margin-top:8px">Scan réseau (Nmap), énumération des services, identification des technologies (WhatWeb, Wappalyzer)</p>
+          </div>
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 2 : Scan de Vulnérabilités</h4>
+            <p style="margin-top:8px">Nikto, OpenVAS, analyse manuelle du code source, identification de CVE-2008-1930</p>
+          </div>
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 3 : Exploitation</h4>
+            <p style="margin-top:8px">Développement d'exploit personnalisé, élévation de privilèges, obtention d'un shell persistant</p>
+          </div>
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 4 : Post-Exploitation</h4>
+            <p style="margin-top:8px">Extraction de données sensibles, analyse forensique, effacement de traces</p>
+          </div>
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 5 : Reporting</h4>
+            <p style="margin-top:8px">Rédaction rapport complet (68 pages), présentation technique, recommandations priorisées</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Vulnérabilités Découvertes</h3>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>🔴 CRITIQUE - CVE-2008-1930</h4>
+            <p><strong>RCE Joomla!</strong> (CVSS 9.8)</p>
+            <p>Exécution de code arbitraire via upload de fichier non contrôlé</p>
+            <p style="margin-top: 8px; color: var(--muted);">Impact : Compromission totale du serveur</p>
+          </div>
+          <div class="feature-card">
+            <h4>🟠 ÉLEVÉE - Weak Credentials</h4>
+            <p>Mots de passe faibles sur comptes admin</p>
+            <p>Brute force réussi en 45 secondes</p>
+            <p style="margin-top: 8px; color: var(--muted);">Impact : Accès non autorisé</p>
+          </div>
+          <div class="feature-card">
+            <h4>🟠 ÉLEVÉE - SQL Injection</h4>
+            <p>Injection SQL dans formulaire de login</p>
+            <p>Extraction complète de la base de données</p>
+            <p style="margin-top: 8px; color: var(--muted);">Impact : Fuite de données</p>
+          </div>
+          <div class="feature-card">
+            <h4>🟡 MOYENNE - Directory Listing</h4>
+            <p>Listage de répertoires activé</p>
+            <p>Exposition de fichiers sensibles (.bak, .sql)</p>
+            <p style="margin-top: 8px; color: var(--muted);">Impact : Divulgation d'information</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Exploitation CVE-2008-1930</h3>
+        <p><strong>Étapes de l'exploitation :</strong></p>
+        <ol style="padding-left: 20px; margin-top: 12px; line-height: 1.8;">
+          <li><strong>Identification</strong> - Version Joomla! 1.5.x détectée via fichiers /administrator/manifests/files/joomla.xml</li>
+          <li><strong>Préparation payload</strong> - Création d'un reverse shell PHP obfusqué pour contourner les filtres</li>
+          <li><strong>Upload malveillant</strong> - Exploitation du formulaire d'upload vulnérable dans le module com_media</li>
+          <li><strong>Activation shell</strong> - Accès au webshell via URL directe, obtention shell interactif (bash)</li>
+          <li><strong>Élévation privilèges</strong> - Exploitation de kernel exploit local (DirtyCow) pour obtenir root</li>
+          <li><strong>Persistance</strong> - Installation de backdoor, création d'utilisateur caché, modification de crontab</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Recommandations de Remédiation</h3>
+        
+        <h4 style="color:var(--emerald-200); margin-top: 16px; margin-bottom: 12px;">Priorité 1 - Actions Immédiates</h4>
+        <ul class="results-list">
+          <li><strong>Mise à jour Joomla!</strong> - Upgrade vers version 4.x (patch CVE-2008-1930)</li>
+          <li><strong>Changement de mots de passe</strong> - Politique de mots de passe forts + MFA</li>
+          <li><strong>Désactivation directory listing</strong> - Configuration Apache (Options -Indexes)</li>
+          <li><strong>Forensics</strong> - Analyse complète pour détecter compromission potentielle</li>
+        </ul>
+
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">Priorité 2 - Améliorations</h4>
+        <ul class="results-list">
+          <li><strong>WAF</strong> - Déploiement ModSecurity avec ruleset OWASP CRS</li>
+          <li><strong>Hardening Apache</strong> - Désactivation modules inutiles, chroot, utilisateur dédié</li>
+          <li><strong>IDS/IPS</strong> - Installation Suricata pour détection d'intrusions</li>
+          <li><strong>Chiffrement</strong> - Migration vers HTTPS avec TLS 1.3</li>
+        </ul>
+
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">Priorité 3 - Long Terme</h4>
+        <ul class="results-list">
+          <li><strong>Programme de patch management</strong> - Processus formalisé de mise à jour</li>
+          <li><strong>Audits périodiques</strong> - Pentest annuel + scans automatisés mensuels</li>
+          <li><strong>Formation équipes</strong> - Sensibilisation sécurité et secure coding</li>
+          <li><strong>Plan de réponse incident</strong> - Procédures documentées et testées</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Livrables</h3>
+        <ul class="results-list">
+          <li><strong>Rapport d'audit complet</strong> (68 pages) - Synthèse exécutive, détails techniques, captures d'écran</li>
+          <li><strong>Proof of Concept</strong> - Scripts d'exploitation avec documentation</li>
+          <li><strong>Matrice de risques</strong> - Priorisation des vulnérabilités selon CVSS</li>
+          <li><strong>Plan de remédiation</strong> - Roadmap sur 6 mois avec coûts estimés</li>
+          <li><strong>Présentation technique</strong> - Support de présentation pour la direction</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Outils Utilisés</h3>
+        <div class="tech-stack">
+          <span class="tech-item">Nmap</span>
+          <span class="tech-item">Nikto</span>
+          <span class="tech-item">OpenVAS</span>
+          <span class="tech-item">Metasploit</span>
+          <span class="tech-item">Burp Suite</span>
+          <span class="tech-item">SQLMap</span>
+          <span class="tech-item">Wireshark</span>
+          <span class="tech-item">John the Ripper</span>
+          <span class="tech-item">Kali Linux</span>
+          <span class="tech-item">Python</span>
+          <span class="tech-item">LaTeX</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Compétences Développées</h3>
+        <ul class="results-list">
+          <li><strong>Tests d'intrusion</strong> - Méthodologie complète du pentest (reconnaissance à post-exploitation)</li>
+          <li><strong>Exploitation de vulnérabilités</strong> - Développement d'exploits, élévation de privilèges</li>
+          <li><strong>Analyse forensique</strong> - Investigation post-compromission, recherche d'artefacts</li>
+          <li><strong>Reporting professionnel</strong> - Rédaction de rapports techniques et exécutifs</li>
+          <li><strong>Communication</strong> - Présentation de résultats à audience technique et non-technique</li>
+          <li><strong>Éthique</strong> - Respect du cadre légal et déontologique du pentest</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3> Retour d'Expérience</h3>
+        <p>Ce projet m'a permis de développer une compréhension pratique de la sécurité offensive :</p>
+        <ul style="margin-top: 12px; padding-left: 20px; line-height: 1.8;">
+          <li><strong>Mindset attaquant</strong> : Comprendre les techniques d'attaquants est essentiel pour mieux défendre</li>
+          <li><strong>Méthodologie rigoureuse</strong> : Un pentest réussi nécessite patience, méthodologie et documentation</li>
+          <li><strong>Impact business</strong> : Les vulnérabilités techniques ont des impacts métier qu'il faut savoir quantifier</li>
+          <li><strong>Responsabilité</strong> : Les compétences en pentest doivent être utilisées de manière éthique et légale</li>
+        </ul>
+      </div>
+    </section>
+
+    <a href="../index.html#projets" class="btn back-btn">← Retour aux projets</a>
+  </main>
+
+  <footer><p>© 2025 Angélique — Portfolio Cybersécurité</p></footer>
+  <div id="toast" class="toast"></div>
+  <script src="../scripts/animations.js"></script>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

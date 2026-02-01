@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoring TAAF — Projet Cybersécurité</title>
+  <meta name="description" content="Projet de monitoring et SIEM pour les Terres Australes et Antarctiques Françaises">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <nav role="navigation" aria-label="Navigation principale">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand" role="banner">
+        <span class="dot" aria-hidden="true"></span> 
+        <span>CYBER • PORTFOLIO</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#a-propos">À propos</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#experience">Expérience</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="toggleNeon" aria-label="Basculer les effets néon">Néon</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <a href="../index.html#projets">Projets</a>
+      <span>/</span>
+      <span>Monitoring TAAF</span>
+    </div>
+
+    <section class="project-hero">
+      <h1 class="glow">Monitoring TAAF — Stack d'Observabilité</h1>
+      <p class="lead">
+        Solution complète de monitoring et SIEM pour les Terres Australes et Antarctiques Françaises 
+        avec Falco IDS, Wazuh SIEM, Grafana et Loki.
+      </p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Durée</span>
+          <span class="meta-value">3 mois (Sept-Déc 2024)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Équipe</span>
+          <span class="meta-value">4 personnes</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Rôle</span>
+          <span class="meta-value">Chef de projet & Architecte Sécurité</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Cadre</span>
+          <span class="meta-value">SAE IUT La Réunion</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Contexte et Objectifs</h3>
+        <p>
+          Les Terres Australes et Antarctiques Françaises (TAAF) nécessitent une infrastructure de 
+          monitoring robuste pour leurs stations scientifiques isolées. Le projet vise à mettre en place 
+          une solution complète d'observabilité et de sécurité capable de :
+        </p>
+        <ul class="results-list" style="margin-top: 16px;">
+          <li>Superviser l'infrastructure IT des stations scientifiques distantes</li>
+          <li>Détecter les anomalies et incidents de sécurité en temps réel</li>
+          <li>Centraliser les logs et métriques pour analyse</li>
+          <li>Assurer la conformité avec les standards de sécurité gouvernementaux</li>
+          <li>Fonctionner en mode dégradé avec connectivité limitée</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Architecture Technique</h3>
+        <p style="margin-bottom: 20px;">
+          L'architecture repose sur une stack Dockerisée hautement disponible et modulaire :
+        </p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>🔍 Collecte de Logs</h4>
+            <p><strong>Grafana Loki</strong> - Agrégation et indexation des logs système, applications et sécurité avec compression efficace pour limiter la bande passante.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Métriques & Dashboards</h4>
+            <p><strong>Grafana + Prometheus</strong> - Visualisation temps réel des KPIs opérationnels, performances système et indicateurs de sécurité.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>IDS Runtime</h4>
+            <p><strong>Falco</strong> - Détection d'anomalies comportementales au niveau kernel (syscalls), détection d'intrusions et violations de politique.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>SIEM & Correlation</h4>
+            <p><strong>Wazuh</strong> - SIEM complet avec détection d'intrusions, analyse de vulnérabilités, monitoring d'intégrité et corrélation d'événements.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Agent de Collecte</h4>
+            <p><strong>Grafana Alloy</strong> - Agent unifié pour la collecte et le routage de métriques, logs et traces vers les différents backends.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Orchestration</h4>
+            <p><strong>Docker Compose</strong> - Déploiement simplifié et gestion des conteneurs avec haute disponibilité et résilience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Gestion de Projet</h3>
+        <p style="margin-bottom: 16px;">
+          En tant que chef de projet, j'ai assuré la coordination de l'équipe et la livraison des jalons :
+        </p>
+        
+        <div class="timeline">
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 1 : Analyse et Conception</h4>
+            <small style="color:var(--muted)">Semaines 1-2</small>
+            <p style="margin-top:8px">
+              Étude des besoins TAAF, analyse de risques EBIOS RM, conception de l'architecture, 
+              sélection des technologies et définition des KPIs de sécurité.
+            </p>
+          </div>
+          
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 2 : Déploiement Infrastructure</h4>
+            <small style="color:var(--muted)">Semaines 3-6</small>
+            <p style="margin-top:8px">
+              Mise en place de l'environnement Docker, configuration des agents de collecte, 
+              intégration Falco et Wazuh, tests de connectivité en mode dégradé.
+            </p>
+          </div>
+          
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 3 : Configuration SIEM</h4>
+            <small style="color:var(--muted)">Semaines 7-9</small>
+            <p style="margin-top:8px">
+              Création des règles de détection personnalisées, configuration des alertes critiques, 
+              intégration avec playbooks de réponse, tuning des faux positifs.
+            </p>
+          </div>
+          
+          <div class="tl-item">
+            <h4 style="color:var(--emerald-200)">Phase 4 : Dashboards et Documentation</h4>
+            <small style="color:var(--muted)">Semaines 10-12</small>
+            <p style="margin-top:8px">
+              Développement des dashboards Grafana, création de la documentation technique et 
+              opérationnelle, formation des équipes, rédaction du rapport final en Typst.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Dashboards Créés</h3>
+        <p style="margin-bottom: 16px;">Tableaux de bord opérationnels pour le monitoring et la sécurité :</p>
+        
+        <ul class="results-list">
+          <li><strong>Vue d'ensemble système</strong> - CPU, RAM, disque, réseau pour toutes les stations</li>
+          <li><strong>Monitoring de sécurité</strong> - Événements Falco et Wazuh, alertes critiques en temps réel</li>
+          <li><strong>Analyse de logs</strong> - Recherche et visualisation des logs agrégés via Loki</li>
+          <li><strong>Compliance dashboard</strong> - Suivi de conformité ANSSI et indicateurs de vulnérabilités</li>
+          <li><strong>Performance réseau</strong> - Latence, débit, disponibilité des liaisons satellites</li>
+          <li><strong>Incidents de sécurité</strong> - Timeline des événements, corrélation et investigation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Résultats et Impacts</h3>
+        <p style="margin-bottom: 16px;">
+          Le déploiement de la solution a permis d'obtenir des résultats mesurables :
+        </p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>Performance</h4>
+            <p>Temps de détection moyen des incidents : <strong>&lt; 2 minutes</strong></p>
+            <p>Réduction de 85% du temps d'investigation</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Sécurité</h4>
+            <p>Détection de <strong>12 vulnérabilités critiques</strong></p>
+            <p>Blocage automatique de 3 tentatives d'intrusion</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Observabilité</h4>
+            <p>Visibilité complète sur <strong>100% des systèmes</strong></p>
+            <p>Centralisation de ~50 Go de logs par mois</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Conformité</h4>
+            <p>Alignement avec <strong>ANSSI/PSSIE</strong></p>
+            <p>Audit de sécurité réussi avec 0 non-conformité critique</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Stack Technologique</h3>
+        <div class="tech-stack">
+          <span class="tech-item">Docker</span>
+          <span class="tech-item">Docker Compose</span>
+          <span class="tech-item">Grafana</span>
+          <span class="tech-item">Loki</span>
+          <span class="tech-item">Prometheus</span>
+          <span class="tech-item">Grafana Alloy</span>
+          <span class="tech-item">Falco IDS</span>
+          <span class="tech-item">Wazuh SIEM</span>
+          <span class="tech-item">eBPF</span>
+          <span class="tech-item">Linux</span>
+          <span class="tech-item">Debian</span>
+          <span class="tech-item">Bash</span>
+          <span class="tech-item">Python</span>
+          <span class="tech-item">YAML</span>
+          <span class="tech-item">Typst</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Compétences Développées</h3>
+        <ul class="results-list">
+          <li><strong>Gestion de projet</strong> - Planning, coordination d'équipe, gestion des risques, communication</li>
+          <li><strong>Architecture de sécurité</strong> - Conception de solutions SIEM, analyse de risques, conformité</li>
+          <li><strong>DevSecOps</strong> - Containerisation, orchestration, intégration continue de la sécurité</li>
+          <li><strong>Détection d'intrusions</strong> - Configuration IDS, création de règles, réduction de faux positifs</li>
+          <li><strong>Observabilité</strong> - Métriques, logs, traces, dashboards, alerting</li>
+          <li><strong>Documentation technique</strong> - Rédaction en LaTeX/Typst, diagrammes d'architecture</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Apprentissages Clés</h3>
+        <p>
+          Ce projet m'a permis de développer une vision complète de la cybersécurité opérationnelle :
+        </p>
+        <ul style="margin-top: 12px; padding-left: 20px; line-height: 1.8;">
+          <li>L'importance d'une architecture modulaire et résiliente pour les environnements critiques</li>
+          <li>La nécessité d'équilibrer sensibilité des détections et opérabilité (gestion des faux positifs)</li>
+          <li>L'intérêt de l'automatisation pour la réponse aux incidents en environnement contraint</li>
+          <li>Les défis spécifiques du monitoring en zones isolées avec connectivité limitée</li>
+          <li>La valeur d'une documentation technique rigoureuse pour la maintenance et le transfert de compétences</li>
+        </ul>
+      </div>
+    </section>
+
+    <a href="../index.html#projets" class="btn back-btn">← Retour aux projets</a>
+  </main>
+
+  <footer>
+    <p>© 2025 Angélique — Portfolio Cybersécurité</p>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="../scripts/animations.js"></script>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

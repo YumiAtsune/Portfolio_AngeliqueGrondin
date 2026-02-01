@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supervision Réseau — Projet Cybersécurité</title>
+  <meta name="description" content="Plateforme intégrée de supervision réseau avec Centreon, GLPI et Wazuh">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <nav role="navigation" aria-label="Navigation principale">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand" role="banner">
+        <span class="dot" aria-hidden="true"></span> 
+        <span>CYBER • PORTFOLIO</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#a-propos">À propos</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#experience">Expérience</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="toggleNeon" aria-label="Basculer les effets néon">Néon</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <a href="../index.html#projets">Projets</a>
+      <span>/</span>
+      <span>Supervision Réseau</span>
+    </div>
+
+    <section class="project-hero">
+      <h1 class="glow">Supervision Réseau — Centreon, GLPI, Wazuh</h1>
+      <p class="lead">
+        Plateforme intégrée de supervision réseau combinant monitoring d'infrastructure (Centreon), 
+        gestion d'incidents (GLPI) et corrélation de sécurité (Wazuh) pour une infrastructure critique.
+      </p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Durée</span>
+          <span class="meta-value">2 mois (Oct-Nov 2024)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Équipe</span>
+          <span class="meta-value">3 personnes</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Rôle</span>
+          <span class="meta-value">Administrateur système & Intégrateur</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Cadre</span>
+          <span class="meta-value">TP Cybersécurité IUT</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Contexte et Problématique</h3>
+        <p>
+          Dans le cadre d'un laboratoire de cybersécurité, nous devions mettre en place une solution 
+          complète de supervision réseau capable de :
+        </p>
+        <ul class="results-list" style="margin-top: 16px;">
+          <li>Monitorer l'état de santé de l'infrastructure réseau (routeurs, switches, serveurs)</li>
+          <li>Gérer le cycle de vie complet des incidents et demandes de service</li>
+          <li>Détecter les anomalies de sécurité et corréler les événements</li>
+          <li>Fournir une vue consolidée pour les équipes opérationnelles et sécurité</li>
+          <li>Automatiser la création de tickets depuis les alertes de monitoring</li>
+        </ul>
+        <p style="margin-top: 16px;">
+          <strong>Défi principal :</strong> Intégrer trois outils majeurs avec des logiques différentes 
+          tout en assurant une expérience utilisateur cohérente et une transmission fluide des informations.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Architecture de la Solution</h3>
+        <p style="margin-bottom: 20px;">
+          Infrastructure virtualisée sur trois VMs Debian avec intégrations bidirectionnelles :
+        </p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>Centreon</h4>
+            <p><strong>Monitoring Infrastructure</strong></p>
+            <p>• Supervision via SNMP, SSH, agents</p>
+            <p>• 50+ services monitorés</p>
+            <p>• Alerting et escalades</p>
+            <p>• Graphiques de performance</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4> GLPI</h4>
+            <p><strong>Gestion d'Incidents</strong></p>
+            <p>• ITSM complet (tickets, assets)</p>
+            <p>• Base de connaissances</p>
+            <p>• Workflow d'approbation</p>
+            <p>• SLA et reporting</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Wazuh</h4>
+            <p><strong>SIEM & Security</strong></p>
+            <p>• Détection d'intrusions</p>
+            <p>• Monitoring d'intégrité (FIM)</p>
+            <p>• Analyse de vulnérabilités</p>
+            <p>• Corrélation d'événements</p>
+          </div>
+        </div>
+
+        <p style="margin-top: 24px;">
+          <strong>Intégrations clés :</strong>
+        </p>
+        <ul class="results-list">
+          <li>Centreon → GLPI : Création automatique de tickets depuis les alertes critiques</li>
+          <li>Wazuh → Centreon : Remontée des alertes de sécurité dans les dashboards</li>
+          <li>GLPI → Centreon : Consultation du statut des équipements depuis les tickets</li>
+          <li>Authentification centralisée via LDAP pour Single Sign-On</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Mise en Œuvre Technique</h3>
+        
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">1. Installation et Configuration</h4>
+        <p>Déploiement sur VMs Debian 11 avec durcissement système :</p>
+        <ul style="padding-left: 20px; margin-top: 8px; line-height: 1.8;">
+          <li><strong>Centreon :</strong> Installation via dépôts officiels, configuration MariaDB, PHP-FPM</li>
+          <li><strong>GLPI :</strong> Déploiement LAMP stack, plugins (Fusion Inventory, Webhooks)</li>
+          <li><strong>Wazuh :</strong> Installation manager + agents, configuration Elasticsearch/Kibana</li>
+        </ul>
+
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">2. Configuration SNMP</h4>
+        <p>Monitoring réseau via SNMP v2c/v3 :</p>
+        <ul style="padding-left: 20px; margin-top: 8px; line-height: 1.8;">
+          <li>Configuration des équipements réseau (routeurs, switches)</li>
+          <li>Création de modèles de services Centreon pour différents vendors</li>
+          <li>Seuils d'alerting personnalisés par type d'équipement</li>
+          <li>Graphiques de bande passante et utilisation des interfaces</li>
+        </ul>
+
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">3. Intégration Centreon-GLPI</h4>
+        <p>Automatisation de la gestion d'incidents :</p>
+        <ul style="padding-left: 20px; margin-top: 8px; line-height: 1.8;">
+          <li>Développement de scripts PHP pour l'API GLPI</li>
+          <li>Configuration des notifications Centreon avec webhook personnalisé</li>
+          <li>Enrichissement automatique des tickets (logs, graphiques, contexte)</li>
+          <li>Mise à jour bidirectionnelle du statut (résolution dans GLPI → ACK dans Centreon)</li>
+        </ul>
+
+        <h4 style="color:var(--emerald-200); margin-top: 20px; margin-bottom: 12px;">4. Sécurisation Wazuh</h4>
+        <p>Déploiement des agents et règles de détection :</p>
+        <ul style="padding-left: 20px; margin-top: 8px; line-height: 1.8;">
+          <li>Installation agents Wazuh sur tous les serveurs monitorés</li>
+          <li>Configuration FIM sur répertoires critiques (/etc, /bin, /root)</li>
+          <li>Création de règles personnalisées pour événements spécifiques</li>
+          <li>Intégration avec VirusTotal pour analyse de malwares</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Défis Techniques Rencontrés</h3>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>⚠️ Authentification MySQL</h4>
+            <p><strong>Problème :</strong> Erreur "Access denied for user 'centreon'@'localhost'"</p>
+            <p><strong>Solution :</strong> Reconfiguration du plugin auth_socket MySQL, migration vers mysql_native_password, révision des privilèges.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Connectivité SNMP</h4>
+            <p><strong>Problème :</strong> Timeouts lors du polling de certains équipements</p>
+            <p><strong>Solution :</strong> Ajustement des paramètres SNMP (timeout, retry), vérification firewall, tests de performance réseau.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Agents Wazuh</h4>
+            <p><strong>Problème :</strong> Agents déconnectés après redémarrage des VMs</p>
+            <p><strong>Solution :</strong> Configuration du service systemd pour auto-restart, ajustement des timeouts de connexion manager.</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>API GLPI</h4>
+            <p><strong>Problème :</strong> Rate limiting lors de la création massive de tickets</p>
+            <p><strong>Solution :</strong> Implémentation d'un système de queue avec retry exponentiel, batch processing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Métriques et Résultats</h3>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <h4>Disponibilité</h4>
+            <p>Uptime services : <strong>99.2%</strong></p>
+            <p>MTTR moyen : <strong>18 minutes</strong></p>
+            <p>Temps de détection incidents : <strong>&lt; 5 min</strong></p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Volume</h4>
+            <p><strong>87 services</strong> monitorés</p>
+            <p><strong>12 hôtes</strong> surveillés</p>
+            <p><strong>~5000 événements/jour</strong> traités</p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Ticketing</h4>
+            <p><strong>142 tickets</strong> créés automatiquement</p>
+            <p>Taux de résolution : <strong>94%</strong></p>
+            <p>SLA respecté : <strong>98.5%</strong></p>
+          </div>
+          
+          <div class="feature-card">
+            <h4>Sécurité</h4>
+            <p><strong>8 alertes critiques</strong> détectées</p>
+            <p><strong>23 vulnérabilités</strong> identifiées</p>
+            <p>Temps de réponse : <strong>&lt; 30 min</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Stack Technologique</h3>
+        <div class="tech-stack">
+          <span class="tech-item">Centreon</span>
+          <span class="tech-item">GLPI</span>
+          <span class="tech-item">Wazuh</span>
+          <span class="tech-item">Debian 11</span>
+          <span class="tech-item">MariaDB</span>
+          <span class="tech-item">PHP</span>
+          <span class="tech-item">Apache</span>
+          <span class="tech-item">SNMP</span>
+          <span class="tech-item">SSH</span>
+          <span class="tech-item">LDAP</span>
+          <span class="tech-item">Elasticsearch</span>
+          <span class="tech-item">Kibana</span>
+          <span class="tech-item">Python</span>
+          <span class="tech-item">Bash</span>
+          <span class="tech-item">APIs REST</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Compétences Acquises</h3>
+        <ul class="results-list">
+          <li><strong>Administration système</strong> - Gestion de serveurs Linux, services web, bases de données</li>
+          <li><strong>Monitoring réseau</strong> - SNMP, protocoles de supervision, création de modèles</li>
+          <li><strong>ITSM</strong> - Processus ITIL, gestion d'incidents, workflows d'approbation</li>
+          <li><strong>Intégration de systèmes</strong> - APIs REST, webhooks, authentification centralisée</li>
+          <li><strong>Troubleshooting</strong> - Analyse de logs, débogage réseau, résolution de problèmes complexes</li>
+          <li><strong>Sécurité opérationnelle</strong> - Détection d'intrusions, monitoring d'intégrité, gestion de vulnérabilités</li>
+          <li><strong>Documentation technique</strong> - Procédures opérationnelles, guides d'installation, runbooks</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="card">
+        <h3>Retour d'Expérience</h3>
+        <p>
+          Ce projet m'a permis de comprendre l'importance d'une approche holistique de la supervision :
+        </p>
+        <ul style="margin-top: 12px; padding-left: 20px; line-height: 1.8;">
+          <li><strong>Visibilité complète</strong> : La corrélation entre monitoring infrastructure, gestion d'incidents et sécurité est essentielle pour détecter et résoudre rapidement les problèmes</li>
+          <li><strong>Automatisation</strong> : La création automatique de tickets depuis les alertes réduit significativement le temps de réaction et évite la perte d'informations</li>
+          <li><strong>Standardisation</strong> : L'utilisation de modèles et de procédures standardisées facilite l'exploitation et réduit les erreurs</li>
+          <li><strong>Persistance</strong> : Le troubleshooting d'intégrations complexes nécessite patience, méthode et documentation rigoureuse</li>
+        </ul>
+      </div>
+    </section>
+
+    <a href="../index.html#projets" class="btn back-btn">← Retour aux projets</a>
+  </main>
+
+  <footer>
+    <p>© 2025 Angélique — Portfolio Cybersécurité</p>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="../scripts/animations.js"></script>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>
