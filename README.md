@@ -1,18 +1,18 @@
-# 🔐 Portfolio Cybersécurité - Angélique
+ Portfolio Cybersécurité - Angélique
 
 Portfolio professionnel avec chatbot 3D interactif et support multilingue (7 langues).
 
-## 🚀 Fonctionnalités
+## Fonctionnalités
 
-- 🤖 **Chatbot 3D intelligent** avec avatar stylisé (Three.js)
-- 🌍 **Support multilingue** : FR, EN, ES, IT, RU, ZH, JA
-- 🎨 **Mode sombre/clair** avec thème violet/émeraude
-- ✨ **Effets néon** activables
-- 🔍 **Recherche** dans le contenu
-- 📱 **Responsive** design
-- ♿ **Accessible** (ARIA, navigation clavier)
+-  **Chatbot 3D intelligent** avec avatar stylisé (Three.js)
+-  **Support multilingue** : FR, EN, ES, IT, RU, ZH, JA
+-  **Mode sombre/clair** avec thème violet/émeraude
+-  **Effets néon** activables
+-  **Recherche** dans le contenu
+-  **Responsive** design
+-  **Accessible** (ARIA, navigation clavier)
 
-## 📁 Structure
+##  Structure
 
 ```
 portfolio/
@@ -29,7 +29,7 @@ portfolio/
     └── translations.js
 ```
 
-## 🎯 Utilisation
+##  Utilisation
 
 1. Ouvrir `index.html` dans un navigateur moderne
 2. Ou utiliser un serveur local :
