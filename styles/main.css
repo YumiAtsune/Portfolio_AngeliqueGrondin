@@ -402,6 +402,14 @@ section.section {
   padding: 30px 0;
   position: relative;
 }
+#amelioration {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--panel);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,255,204,0.2);
+}
 
 .card {
   background: linear-gradient(135deg, rgba(0,227,148,.08), rgba(0,0,0,.4));
